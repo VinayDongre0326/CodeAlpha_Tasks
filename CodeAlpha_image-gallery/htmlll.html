@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<button class="toggle">🌙 Dark Mode</button>
+
+<div class="filter-buttons">
+    <button data-filter="all">All</button>
+    <button data-filter="nature">Nature</button>
+    <button data-filter="city">City</button>
+</div>
+
+<div class="gallery">
+    <div class="gallery-item nature">
+        <img src="images/nature1.jpg" alt="a straight path going through dense green forest of tall trees ">
+        <div class="caption">Nature</div>
+    </div>
+
+    <div class="gallery-item nature">
+        <img src="images/nature2.jpg" alt="Autumn forest scene with a winding dirt path covered in fallen leaves, 
+        surrounded by tall trees displaying vibrant red, orange, and golden foliage.">
+        <div class="caption">Nature</div>
+    </div>
+
+    <div class="gallery-item nature">
+        <img src="images/nature3.jpg" alt="Lush tropical landscape with a calm lake, green vegetation in the foreground,
+        distant mountains, cascading waterfalls, and a bright sky with soft clouds.">
+        <div class="caption">Nature</div>
+    </div>
+
+    <div class="gallery-item nature">
+        <img src="images/nature4.jpg" alt="Rural countryside road at sunset with a man riding a bullock cart pulled by two oxen,
+        surrounded by green trees and hills.">
+        <div class="caption">Nature</div>
+    </div>
+
+    <div class="gallery-item city">
+        <img src="images/city1.jpg" alt="Urban street canyon at sunset with tall buildings, 
+        traffic lights, cars, and golden reflections in a puddle.">
+        <div class="caption">City</div>
+    </div>
+
+    <div class="gallery-item city">
+        <img src="images/city2.jpg" alt="Nighttime city skyline with illuminated skyscrapers,
+        office lights, and cranes against a dark sky.">
+        <div class="caption">City</div>
+    </div>
+
+    <div class="gallery-item city">
+        <img src="images/city3.jpg" alt="Tree-lined city street at sunset with tram tracks in the center, 
+        cars and buses in traffic, and warm sunlight glowing between buildings.">
+        <div class="caption">City</div>
+    </div>
+
+    <div class="gallery-item city">
+        <img src="images/city4.jpg" alt="City skyline at dusk with illuminated skyscrapers and curving elevated highways,
+        showing light trails from moving traffic under a twilight sky.">
+        <div class="caption">City</div>
+    </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <button class="prev">&#10094;</button>
+    <img id="lightbox-img">
+    <button class="next">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
