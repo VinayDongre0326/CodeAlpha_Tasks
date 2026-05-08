@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+
+      <!-- Sidebar Toggle -->
+      <button class="navbar-toggler me-2"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#sidebar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand fw-bold" href="#">Admin Dashboard</a>
+
+      <div class="ms-auto d-flex align-items-center">
+
+        <!-- Search -->
+        <form class="d-flex me-3">
+          <input class="form-control me-2" type="search" placeholder="Search">
+          <button class="btn btn-primary">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+
+        <!-- User Icon -->
+        <i class="bi bi-person-circle text-white fs-4"></i>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="offcanvas offcanvas-start sidebar-nav bg-dark text-white"
+    tabindex="-1"
+    id="sidebar">
+
+    <div class="offcanvas-body p-0">
+
+      <nav class="navbar-dark">
+
+        <ul class="navbar-nav">
+
+          <li>
+            <a href="#" class="nav-link px-3 active py-3">
+              <i class="bi bi-speedometer2 me-2"></i>
+              Dashboard
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link px-3 py-3">
+              <i class="bi bi-people me-2"></i>
+              Students
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link px-3 py-3">
+              <i class="bi bi-book me-2"></i>
+              Courses
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link px-3 py-3">
+              <i class="bi bi-file-earmark-text me-2"></i>
+              Exams
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link px-3 py-3">
+              <i class="bi bi-gear me-2"></i>
+              Settings
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="mt-5 pt-4">
+
+    <div class="container-fluid">
+
+      <!-- Heading -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h2>College Admin Dashboard</h2>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="row">
+
+        <div class="col-md-3 mb-3">
+          <div class="card bg-primary text-white h-100 shadow">
+            <div class="card-body text-center">
+              <h5>Total Students</h5>
+              <h2>1200</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="card bg-success text-white h-100 shadow">
+            <div class="card-body text-center">
+              <h5>Total Courses</h5>
+              <h2>45</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="card bg-warning text-dark h-100 shadow">
+            <div class="card-body text-center">
+              <h5>Total Exams</h5>
+              <h2>20</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="card bg-danger text-white h-100 shadow">
+            <div class="card-body text-center">
+              <h5>Pending Results</h5>
+              <h2>8</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Charts -->
+      <div class="row mt-4">
+
+        <div class="col-md-6 mb-3">
+          <div class="card shadow">
+            <div class="card-header">
+              Student Performance
+            </div>
+
+            <div class="card-body">
+              <canvas class="chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="card shadow">
+            <div class="card-header">
+              Course Analytics
+            </div>
+
+            <div class="card-body">
+              <canvas class="chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Table -->
+      <div class="row mt-4">
+
+        <div class="col-md-12">
+
+          <div class="card shadow">
+
+            <div class="card-header">
+              Student Data
+            </div>
+
+            <div class="card-body">
+
+              <div class="table-responsive">
+
+                <table class="table table-striped data-table">
+
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Department</th>
+                      <th>Year</th>
+                      <th>Result</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <td>Rahul</td>
+                      <td>Computer</td>
+                      <td>3rd</td>
+                      <td>Pass</td>
+                    </tr>
+
+                    <tr>
+                      <td>Priya</td>
+                      <td>IT</td>
+                      <td>2nd</td>
+                      <td>Pass</td>
+                    </tr>
+
+                    <tr>
+                      <td>Aman</td>
+                      <td>ENTC</td>
+                      <td>4th</td>
+                      <td>Fail</td>
+                    </tr>
+
+                    <tr>
+                      <td>Sneha</td>
+                      <td>Mechanical</td>
+                      <td>1st</td>
+                      <td>Pass</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

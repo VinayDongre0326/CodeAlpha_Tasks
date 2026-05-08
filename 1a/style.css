@@ -1,0 +1,49 @@
+body {
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+:root {
+  --offcanvas-width: 250px;
+  --topNavbarHeight: 56px;
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+
+.nav-link:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+
+  body {
+    overflow: auto !important;
+  }
+
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+
+  .sidebar-nav {
+    transform: none;
+    visibility: visible !important;
+    top: var(--topNavbarHeight);
+    height: calc(100% - var(--topNavbarHeight));
+  }
+
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+}

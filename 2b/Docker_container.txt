@@ -1,0 +1,21 @@
+step 1 :- docker --version
+
+step 2 :- (Download Ubuntu Docker Image) docker pull ubuntu
+
+step 3 :- docker images (You should see: ubuntu)
+
+step 4 :- (Create and Start Container) docker run -it ubuntu (You will see something like: root@xxxxx:/#)
+
+step 5 :- pwd
+
+step 6 :- ls
+
+step 7 :- mkdir demo
+
+step 8 :- cd demo
+
+step 9 :- pwd
+
+step 10 :- exit
+
+step 11 :- docker ps -a
